@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "titles",
+  "info": {
+    "singularName": "title",
+    "pluralName": "titles",
+    "displayName": "Title",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "minimumweight, 105 pounds (48 kg)",
+        "light flyweight, 108 pounds (49 kg)",
+        "flyweight, 112 pounds (51 kg)",
+        "super flyweight, 115 pounds (52 kg)",
+        "bantamweight, 118 pounds (53.5 kg)",
+        "super bantamweight, 122 pounds (55 kg)",
+        "featherweight, 126 pounds (57 kg)",
+        "super featherweight, 130 pounds (59 kg)",
+        "lightweight, 135 pounds (61 kg)",
+        "super lightweight, 140 pounds (63.5 kg)",
+        "welterweight, 147 pounds (67 kg)",
+        "super welterweight, 154 pounds (70 kg)",
+        "middleweight, 160 pounds (72.5 kg)",
+        "super middleweight, 168 pounds (76 kg)",
+        "light heavyweight, 175 pounds (79 kg)",
+        "cruiserweight, 200 pounds (91 kg)",
+        "heavyweight, unlimited"
+      ]
+    },
+    "Federation": {
+      "type": "enumeration",
+      "enum": [
+        "WBA",
+        "WBC",
+        "WBO",
+        "IBF"
+      ]
+    },
+    "champions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::champion.champion",
+      "mappedBy": "titles"
+    }
+  }
+}

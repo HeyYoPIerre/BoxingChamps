@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "champions",
+  "info": {
+    "singularName": "champion",
+    "pluralName": "champions",
+    "displayName": "Champions",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Still": {
+      "type": "boolean"
+    },
+    "titles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::title.title",
+      "inversedBy": "champions"
+    }
+  }
+}
